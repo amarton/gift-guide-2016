@@ -1,0 +1,531 @@
+@import "mixins"
+@import "variables"
+@import "bourbon/bourbon"
+
+/********* SITE STYLES ***********/
+
+$red: #014421
+$gold: #D3A916
+
+html, body
+	//height: 100%
+	background-color: $red
+	font-family: "Roboto", sans-serif
+
+#tophat
+	height: 40px
+	background-color: #222222
+	overflow: hidden
+
+#logo
+	width: 250px
+	height: 100%
+	float: left
+	line-height: 48px
+	vertical-align: middle
+	img
+		margin: 0 10px
+		width: 100%
+	@media (max-width: 400px)
+		width: 200px
+
+#share-tools
+	float: right
+	height: 100%
+	line-height: 40px
+	font-size: 30px
+	vertical-align: middle
+	color: white
+	margin: 0 10px
+	span
+		cursor: pointer
+		&:hover
+			color: $gold
+
+#panel
+	background-color: $red
+	width: 306px
+	//height: 100%
+	header
+		font-family: "Playfair Display", serif
+		font-size: 90px
+		color: white
+		line-height: 1
+		text-align: center
+		@media (max-width: 450px)
+			font-size: 56px
+	@media (max-width: 875px)
+		+size(auto)
+		text-align: center
+
+.cube-ad
+	+size(300px 250px)
+	margin: 40px auto 70px auto
+	color: darken(#D3A916, 10%)
+	font-size: 12px
+	border-top: 1px solid darken(#D3A916, 20%)
+	div
+		margin-top: 5px
+	@media (max-width: 875px)
+		display: none
+	&.mobile
+		display: none
+		@media (max-width: 875px)
+			display: block
+
+
+#ribbon
+	margin: 55px 0 30px 0
+	border-top: 3px solid $gold
+	height: 2px
+	border-bottom: 1px solid $gold
+	text-align: center
+	img
+		position: relative
+		bottom: 52px
+		@media (max-width: 450px)
+			width: 80px
+			bottom: 15px
+
+#chatter
+	padding: 20px
+	color: white
+	text-align: left
+
+.filters
+	padding: 20px 
+	color: white
+	ul
+		@media (max-width: 875px)
+			max-height: 0px
+			overflow: hidden
+			+transition(max-height 0.5s)
+			&.visible
+				max-height: 450px
+		li
+			text-transform: uppercase
+			margin: 7px 0
+			cursor: pointer
+			text-align: left
+			&:hover
+				color: $gold
+			&.selected
+				color: $gold
+				font-weight: 700
+				cursor: default
+	@media (max-width: 875px)
+		display: inline-block
+		vertical-align: top
+		padding: 0 20px
+	@media (max-width: 400px)
+		padding: 0 10px
+
+.list-header
+	font-weight: 700
+	font-size: 20px
+	@media (max-width: 875px)
+		display: none
+
+.list-header-mobile
+	font-weight: 700
+	font-size: 20px
+	display: none
+	span
+		display: inline-block
+		min-width: 100px
+		padding: 0 25px 5px 0
+		color: $gold
+		border-bottom: 1px solid #AE531A
+		position: relative
+		cursor: pointer
+		&:after
+			font-family: "icons" //Update when icons are downloaded
+			content: '\e604'
+			speak: none
+			font-style: normal
+			font-weight: normal
+			font-variant: normal
+			text-transform: none
+			position: absolute
+			top: 0
+			right: 0
+			height: 100%
+			line-height: 20px
+			vertical-align: middle
+			+transition(all 0.3s)
+			+transform(rotate(0deg) translateY(0px))
+		&.reverse
+			&:after
+				//content: '\e605'
+				+transform(rotate(180deg) translateY(5px))
+
+	@media (max-width: 875px)
+		display: block
+
+#related-links
+	background-color: darken($red, 10%)
+	padding: 20px 
+	+links(white, none)
+	color: white
+	ul
+		list-style-type: disc
+		margin-top: 0px
+		padding: 10px 20px
+		li
+			padding: 5px
+			margin: 0
+			&:nth-child(odd)
+				//background-color: darken($red, 5%)
+	@media (max-width: 875px)
+		display: none
+
+#credits
+	padding: 20px
+	color: white
+	@media (max-width: 875px)
+		display: none
+
+#gift-side
+	background-color: #E0E0E0
+	position: absolute !important
+	top: 40px
+	left: 306px
+	right: 0
+	min-height: 2000px
+	@media (max-width: 875px)
+		position: relative !important
+		top: 0
+		left: 0
+		min-height: 300px
+
+#gifts
+	margin: auto
+
+.gift
+	width: 230px
+	//margin: 5px 10px 5px 0
+	margin: 5px
+	border: 1px solid #CCCCCC
+	cursor: pointer
+	overflow: hidden
+	img
+		width: 100%
+		display: block
+		+transition(all 0.3s)
+		+transform(scale(1))
+		&:hover
+			+transform(scale(1.1))
+	&:after
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: $red
+		opacity: 0
+		+transition(opacity 0.3s)
+		z-index: 9
+	&:hover
+		&:after
+			opacity: 0.7
+	@media (max-width: 1024px)
+		margin: 3px
+	@media (max-width: 800px)
+		&:hover
+			&:after
+				opacity: 0
+	@media (max-width: 500px)
+		width: 140px
+
+.gift-name
+	position: absolute
+	top: 30px
+	left: 0
+	width: 86%
+	margin: 0 7%
+	z-index: 10
+	color: white
+	font-size: 34px
+	font-weight: 300
+	line-height: 1.2
+	opacity: 0
+	+transform(translateY(-20px))
+	+transition(all 0.4s)
+	&:after
+		content: attr(data-brand)
+		position: absolute
+		top: 100%
+		left: 0
+		margin-top: 5px
+		padding: 5px 10px
+		background-color: black
+		color: white
+		font-size: 14px
+		font-weight: 400
+		opacity: 0
+		+transform(translateY(35px))
+		+transition(all 0.4s)
+	&.visible
+		+transform(translateY(0px))
+		opacity: 1
+		&:after
+			opacity: 1
+			+transform(translateY(0px))
+	@media (max-width: 800px)
+		&.visible
+			display: none
+			&:after
+				display: none
+
+.gift-social
+	display: none
+	position: absolute
+	bottom: 0
+	right: 10px
+	color: white
+	font-size: 30px
+	z-index: 10
+	line-height: 1
+	span
+		display: inline-block
+		+transform(translateY(100px))
+		+transition-property(transform)
+		+transition-duration(0.3s)
+		+transition-delay(0s)
+		&:hover
+			color: $gold
+	&.visible
+		span
+			+transform(translateY(0px))
+
+.gift-more
+	position: absolute
+	bottom: 10px
+	left: 7%
+	color: white
+	font-weight: 700
+	font-size: 14px
+	z-index: 10
+	line-height: 1
+	+transform(translateY(100px))
+	+transition-property(transform)
+	+transition-duration(0.3s)
+	+transition-delay(0s)
+	&:hover
+		color: $gold
+	&.visible
+		+transform(translateY(0px))	
+	@media (max-width: 800px)
+		display: none		
+
+//Lightbox
+
+#lightbox
+	+size(700px 350px)
+	position: fixed
+	z-index: 12
+	color: white
+	opacity: 0
+	visibility: hidden
+	+transform(scale(0.7))
+	+transition(all 0.5s)
+	&.visible
+		opacity: 1
+		visibility: visible
+		+transform(scale(1))
+	@media (max-width: 1024px)
+		width: 60%
+	@media (max-width: 875px)
+		width: 80%
+	@media (max-width: 730px)
+		height: auto
+	@media (max-width: 475px)
+		width: 95%
+
+#lb-overlay
+	position: absolute
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: $red
+	opacity: 0
+	visibility: hidden
+	+transition(all 0.5s)
+	z-index: 11
+	&.visible
+		opacity: 0.8
+		visibility: visible
+	&.loading
+		opacity: 0.9
+		visibility: visible
+
+#lb-image, #sb-image
+	float: left
+	+size(40% 100%)
+	background-color: #E0E0E0
+	background-size: contain
+	background-repeat: no-repeat
+	background-position: center center
+
+#lb-image
+	@media (max-width: 730px)
+		display: none	
+
+
+#lb-info, #sb-info
+	float: left
+	+size(60% 100%)
+	background-color: #222222
+
+#lb-info	
+	@media (max-width: 730px)
+		+size(auto)
+		float: none
+
+#lb-name, #sb-name
+	font-size: 34px
+	line-height: 1.2
+	padding: 0 15px
+	margin: 10px 0 0 0 
+	@media (max-width: 730px)
+		padding: 10px 45px 10px 15px
+
+
+#lb-brand, #sb-brand
+	font-size: 16px
+	padding: 0 15px 5px 15px
+	margin: 0 0 10px 0
+	color: #A9A9A9
+	border-bottom: 1px solid #444444
+
+#lb-price, #sb-price
+	font-size: 32px
+	line-height: 1
+	color: $gold
+	padding: 0 15px
+	margin: 10px 0
+
+#lb-desc, #sb-desc
+	padding: 0 15px
+	margin: 10px 0
+	+links($gold, underline)
+
+#lb-link, #sb-link
+	padding: 0 15px
+	+links($gold, none)
+	font-size: 22px
+	line-height: 1
+	margin: 15px 0 5px 0
+
+#lb-social
+	padding: 0 15px
+	margin-top: 10px
+	span
+		font-size: 30px
+		line-height: 1
+		cursor: pointer
+		margin-right: 5px
+		&:hover
+			color: $gold
+
+#lb-close
+	position: absolute
+	top: 10px
+	right: 10px
+	font-size: 30px
+	cursor: pointer
+	@media (max-width: 730px)
+		top: 15px
+
+
+//Shared item
+#sharebox
+	background-color: #222222
+	color: white
+	max-height: 0px
+	+transition(all 0.5s)
+	overflow: hidden
+	padding: 0
+	&.visible
+		padding: 1px 0
+		max-height: 350px
+	@media (max-width: 600px)
+		&.visible
+			max-height: 400px
+
+#sharebox-header
+	font-size: 16px
+	color: #A9A9A9
+	padding: 10px 0 10px 10px
+	font-weight: 400
+	text-transform: uppercase
+	background-color: black
+	text-align: center
+	border-bottom: 1px solid #333333
+	position: relative
+
+#sharebox-content
+	width: 70%
+	margin: 10px auto
+	position: relative
+	@media (max-width: 875px)
+		width: 90%
+
+#sb-image
+	position: absolute
+	@media (max-width: 575px)
+		display: none
+
+#sb-info
+	position: relative
+	left: 40%
+	@media (max-width: 600px)
+		left: 0
+		+size(auto)
+
+#sb-brand
+	border: 0
+
+#sb-close
+	position: absolute
+	top: 5px
+	right: 10px
+	font-size: 30px
+	cursor: pointer
+
+#gift-loader
+	position: fixed
+	top: 45%
+	left: calc(50% + 100px)
+	opacity: 0
+	visibility: hidden
+	+transition(all 0.5s)
+	&.visible
+		opacity: 1
+		visibility: visible
+	@media (max-width: 875px)
+		position: absolute
+		top: 60px
+		left: 0
+		width: 100%
+		text-align: center
+
+/***** CLEARFIX *****/
+
+.group:after
+	visibility: hidden
+	display: block
+	content: ""
+	clear: both
+	height: 0
+
+* html .group
+	zoom: 1
+
+*:first-child+html .group
+	zoom: 1
+
+
+

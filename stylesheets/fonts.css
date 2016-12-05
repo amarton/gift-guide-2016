@@ -1,0 +1,55 @@
+@font-face {
+	font-family: 'icons';
+	src:url('fonts/icons/icons.eot?om25pe');
+	src:url('fonts/icons/icons.eot?#iefixom25pe') format('embedded-opentype'),
+		url('fonts/icons/icons.woff?om25pe') format('woff'),
+		url('fonts/icons/icons.ttf?om25pe') format('truetype'),
+		url('fonts/icons/icons.svg?om25pe#icons') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icons';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-gift:before {
+	content: "\e606";
+}
+.icon-twitter:before {
+	content: "\e602";
+}
+.icon-pinterest:before {
+	content: "\e608";
+}
+.icon-facebook:before {
+	content: "\e603";
+}
+.icon-cross:before {
+	content: "\e117";
+}
+.icon-arrow-left:before {
+	content: "\e600";
+}
+.icon-arrow-down:before {
+	content: "\e604";
+}
+.icon-arrow-up:before {
+	content: "\e605";
+}
+.icon-arrow-right:before {
+	content: "\e601";
+}
+.icon-gift2:before {
+	content: "\e607";
+}
