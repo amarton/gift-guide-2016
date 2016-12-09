@@ -268,7 +268,7 @@ var app = {
 	tweet_item: function(hash){
 
 			var tweet = "Check out what I found on Baltimore Sun's Gift Guide"; //Tweet text
-			var url = "http://data.baltimoresun.com/jin/gift-guide-test/index.html%23" + hash;
+			var url = "http://data.baltimoresun.com/gift-guide-2016/index.html%23" + hash;
 
 			var twitter_url = "https://twitter.com/intent/tweet?text="+tweet+"&url="+url+"&tw_p=tweetbutton";
 			window.open(twitter_url, 'mywin','left=200,top=200,width=500,height=300,toolbar=1,resizable=0'); return false;
@@ -277,7 +277,7 @@ var app = {
 
 	facebook_item: function(hash, product, brand){
 
-		var picture = "http://data.baltimoresun.com/jin/gift-guide-test/images/gifts/"+hash+".jpg"; //Picture URL
+		var picture = "http://data.baltimoresun.com/gift-guide-2016/images/gifts/"+hash+".jpg"; //Picture URL
 		var title = "Gift Guide 2014"; //Post title
 
 		//Escape any ampersands with URL encoding
@@ -285,7 +285,7 @@ var app = {
 		brand = brand.replace("&","%26");
 
 		var description = "Check out what I found on Baltimore Sun's Gift Guide: "+product+" at "+brand; //Post description
-		var url = "http://data.baltimoresun.com/jin/gift-guide-test/index.html%23" + hash;
+		var url = "http://data.baltimoresun.com/gift-guide-2016/index.html%23" + hash;
 
 		var facebook_url = "https://www.facebook.com/dialog/feed?display=popup&app_id=310302989040998&link="+url+"&picture="+picture+"&name="+title+"&description="+description+"&redirect_uri=http://data.baltimoresun.com";    		
 		window.open(facebook_url, 'mywin','left=200,top=200,width=500,height=300,toolbar=1,resizable=0'); return false;
@@ -294,8 +294,8 @@ var app = {
 
 	pin_item: function(hash, product, brand){
 
-	    var url = "http://data.baltimoresun.com/jin/gift-guide-test%23"+hash;
-		var picture = "http://data.baltimoresun.com/jin/gift-guide-test/images/gifts-large/"+hash+".jpg"; //Picture URL
+	    var url = "http://data.baltimoresun.com/gift-guide-2016%23"+hash;
+		var picture = "http://data.baltimoresun.com/gift-guide-2016/images/gifts-large/"+hash+".jpg"; //Picture URL
 		var description = "Check out what I found on Baltimore Sun's Gift Guide: "+product+" at "+brand; //Pin description
 
 		var pinterest_url = "https://www.pinterest.com/pin/create/button/?url="+url+"&media="+picture+"&description="+description;
@@ -377,7 +377,7 @@ var app = {
 		$("#share-tools .icon-twitter").on("click",function(){
 
 			var tweet = "Don't stress - find the perfect gift with the Baltimore Sun gift guide."; //Tweet text
-			var url = "http://data.baltimoresun.com/jin/gift-guide-test/";
+			var url = "http://data.baltimoresun.com/gift-guide-2016/";
 
 			var twitter_url = "https://twitter.com/intent/tweet?text="+tweet+"&url="+url+"&tw_p=tweetbutton";
 			window.open(twitter_url, 'mywin','left=200,top=200,width=500,height=300,toolbar=1,resizable=0'); return false;
@@ -386,10 +386,10 @@ var app = {
 
 		$("#share-tools .icon-facebook").on("click",function(){
 
-			var picture = "http://data.baltimoresun.com/jin/gift-guide-test/images/present.jpg"; //Picture URL
+			var picture = "http://data.baltimoresun.com/gift-guide-2016/images/giftguide-fb-thumb.png"; //Picture URL
 			var title = "Baltimore Sun Gift Guide"; //Post title
 			var description = "Don't stress - find the perfect gift with the Baltimore Sun gift guide."; //Post description
-			var url = "http://data.baltimoresun.com/jin/gift-guide-test/";
+			var url = "http://data.baltimoresun.com/gift-2016/";
 
 	    	var facebook_url = "https://www.facebook.com/dialog/feed?display=popup&app_id=310302989040998&link="+url+"&picture="+picture+"&name="+title+"&description="+description+"&redirect_uri=http://data.baltimoresun.com";    		
 			window.open(facebook_url, 'mywin','left=200,top=200,width=500,height=300,toolbar=1,resizable=0'); return false;
