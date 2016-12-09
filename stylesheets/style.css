@@ -2,12 +2,9 @@
 /********* SITE STYLES ********** */
 html, body {
   background-color: #233468;
-  font-family: "Roboto", sans-serif; }
+  font-family: "Roboto", sans-serif;
+  padding-top: 30px; }
 
-#tophat {
-  height: 40px;
-  background-color: #222222;
-  overflow: hidden; }
 
 #logo {
   width: 250px;
@@ -23,13 +20,14 @@ html, body {
       width: 200px; } }
 
 #share-tools {
-  float: right;
+
   height: 100%;
   line-height: 40px;
-  font-size: 30px;
+  font-size: 50px;
   vertical-align: middle;
   color: white;
-  margin: 0 10px; }
+  text-align: center; 
+  color: #DFBAC1;}
   #share-tools span {
     cursor: pointer; }
     #share-tools span:hover {
@@ -82,8 +80,8 @@ html, body {
     bottom: 52px; }
     @media (max-width: 450px) {
       #ribbon img {
-        width: 80px;
-        bottom: 15px; } }
+        width: 60px;
+        bottom: 35px; } }
 
 #chatter {
   padding: 20px;
@@ -206,6 +204,7 @@ html, body {
 #gift-side {
   background-color: #E0E0E0;
   position: absolute !important;
+  padding-top: 30px;
   top: 40px;
   left: 306px;
   right: 0;
@@ -270,7 +269,7 @@ html, body {
   margin: 0 7%;
   z-index: 10;
   color: white;
-  font-size: 34px;
+  font-size: 24px;
   font-weight: 300;
   line-height: 1.2;
   opacity: 0;

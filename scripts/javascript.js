@@ -386,7 +386,7 @@ var app = {
 
 		$("#share-tools .icon-facebook").on("click",function(){
 
-			var picture = "http://data.baltimoresun.com/gift-guide-2016/images/present.png"; //Picture URL
+			var picture = "http://data.baltimoresun.com/gift-guide-2016/images/giftguide-fb-thumb.png"; //Picture URL
 			var title = "Baltimore Sun Gift Guide"; //Post title
 			var description = "Don't stress - find the perfect gift with the Baltimore Sun gift guide."; //Post description
 			var url = "http://data.baltimoresun.com/gift-2016/";
